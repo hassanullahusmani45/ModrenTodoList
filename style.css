@@ -1,0 +1,243 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1;
+    text-rendering: optimizeSpeed;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button,
+[role="button"] {
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+[type=date],
+[type=datetime],
+[type=datetime-local],
+[type=email],
+[type=month],
+[type=number],
+[type=password],
+[type=search],
+[type=tel],
+[type=text],
+[type=time],
+[type=url],
+[type=week],
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+::-moz-placeholder {
+    opacity: 1;
+}
+
+textarea {
+    vertical-align: top;
+
+    overflow: auto;
+}
+
+
+
+[type='checkbox']:focus,
+[type='radio']:focus {
+    outline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* My costom styles */
+
+@font-face {
+    font-family: 'roboto-regular';
+    src: url('./public/font/Roboto/static/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'roboto-medium';
+    src: url('./public/font/Roboto/static/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'roboto-bold';
+    src: url('./public/font/Roboto/static/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'roboto-extrabold';
+    src: url('./public/font/Roboto/static/Roboto-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+/* theme */
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #f3f4f6;
+    --bg-primary: #fff;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    --border-color: #0084d1;
+    --bg-input: #e5e7eb;
+    --placeholder-color: #364153;
+}
+
+.dark-theme {
+    --primary-color: #f3f4f6;
+    --secondary-color: #1a1a1a;
+    --bg-primary: #1a1f1f;
+    --shadow-sm: 0 2px 4px rgba(255, 255, 255, 0.05);
+    --shadow-md: 0 4px 8px rgba(255, 255, 255, 0.07);
+    --shadow-lg: 0 8px 16px rgba(255, 255, 255, 0.1);
+    --border-color: #0084d1;
+    --bg-input: #364153;
+    --placeholder-color: #d1d5dc;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'roboto-medium';
+}
+
+
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        max-width: 1536px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+}
+
+
+.container {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0 auto;
+    padding: 1re;
+}
