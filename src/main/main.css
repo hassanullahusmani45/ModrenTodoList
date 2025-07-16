@@ -1,0 +1,35 @@
+main {
+    margin-top: 5rem;
+}
+
+.addModal-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.addModal-btn:hover {
+    transform: rotate(-450deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.addModalIcon {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+@media (min-width: 640px) {
+    .addModal-btn {
+        bottom: 2rem;
+        right: 2rem;
+    }
+}

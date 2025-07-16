@@ -5,7 +5,7 @@
     top: 0;
     z-index: 10;
     background-color: var(--bg-primary);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
 }
 
 .header-content {
@@ -72,8 +72,17 @@
     gap: 0.5rem;
 }
 
-.date {
+.date-container{
     display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.date-icon{
+    color: var(--border-color);
+    font-size: 1.2rem;
+}
+.date {
     text-wrap: nowrap;
     font-family: 'roboto-regular', sans-serif;
 }
@@ -87,8 +96,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 2.4rem;
-    min-height: 2.4rem;
+    min-width: 2rem;
+    min-height: 2rem;
     border-radius: 100%;
     background-color: var(--border-color);
     box-shadow: var(--shadow-lg);
@@ -120,8 +129,8 @@
         gap: 1rem;
     }
 
-    .date {
-        display: block;
+    .date-container {
+        display: flex;
     }
 }
 

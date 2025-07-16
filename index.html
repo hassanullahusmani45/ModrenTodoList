@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/icon/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./src/header/header.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/header/header.css">
+    <link rel="stylesheet" href="./src/main/main.css">
+    <link rel="stylesheet" href="./src/modal/modal.css">
     <title>HASSAN</title>
 </head>
 
@@ -22,9 +24,12 @@
                 </div>
 
                 <div class="right-header">
-                    <div id="date" class="date"></div>
+                    <div class="date-container">
+                        <i class="fa-solid fa-calendar-days date-icon"></i>
+                        <div id="date" class="date"></div>
+                    </div>
                     <button class="theme-toggle">
-                        <i class="fa-solid fa-moon"></i>
+                        
                     </button>
                     <div class="profile">
                         <img src="./public/assets/myprofile.png" alt="myprofile">
@@ -33,6 +38,55 @@
             </div>
         </div>
     </header>
+    <main>
+        <div class="container">
+            <div class="filters">
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <div id="addModal" class="todoModal">
+        <div class="todoModal-content">
+            <div class="todoModal-header">
+                <h2 class="todoModal-title">Add Todo</h2>
+                <button id="closeAddModalBtn" class="close-btn">&times;</button>
+            </div>
+            <form id="addTodoForm">
+                <label for="title" class="todoLabel">Title</label>
+                <input type="text" name="title" id="title" class="todoInput" placeholder="Enter your todo title...">
+                <div class="error-box title">*</div>
+
+                <label for="difficulty" class="todoLabel">Difficulty</label>
+                <div class="selectContainer">
+                    <select name="difficulty" id="difficulty" class="todoInput">
+                        <option value="1">⭐</option>
+                        <option value="2">⭐⭐</option>
+                        <option value="3">⭐⭐⭐</option>
+                        <option value="4">⭐⭐⭐⭐</option>
+                        <option value="5">⭐⭐⭐⭐⭐</option>
+                    </select>
+                    <i class="fa-solid fa-angle-down" id="angle-down"></i>
+                    <div class="error-box difficulty">*</div>
+                </div>
+
+                <label for="description" class="todoLabel">Description</label>
+                <textarea name="description" id="description" class="todoDescriptionInput"
+                    placeholder="Enter your todo description..."></textarea>
+                <div class="error-box description" >*</div>
+                <button type="submit" id="addTodoSubmitBtn" class="submitTodoBtn" disabled>Add Todo</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <div class="addModal-btn" id="addTodoBtn">
+        <i class="fa-solid fa-plus addModalIcon"></i>
+    </div>
     <script type="module" src="script.js"></script>
 </body>
 
